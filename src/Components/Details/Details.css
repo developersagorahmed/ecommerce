@@ -1,0 +1,10 @@
+.border2{
+    font-size: 14px;
+    line-height: 0;
+    background: #41b468;
+    color: white ;
+    display: inline-block;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #fff;
+}
