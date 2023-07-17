@@ -215,7 +215,7 @@ const Payment = () => {
 										<td></td>
 										<td></td>
 										<td className="text-base font-semibold">Grand Total</td>
-										<td className="border-2">{quantity * data?.price + 60}</td>
+										<td className="border-2">{(quantity * data?.price + 60).toFixed(2)}</td>
 									</tr>
 								</tbody>
 							</table>
