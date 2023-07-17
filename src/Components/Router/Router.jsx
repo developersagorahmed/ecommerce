@@ -9,6 +9,7 @@ import AddProduct from "../Admin/AdminPage/AddProduct";
 import ManageProducts from "../Admin/ManageProducts/ManageProducts";
 import Success from "../Success/Success";
 import Inva from "../Admin/ManageProducts/Inva";
+import Dashboard from "../Admin/AdminPage/Dashboard/Dashboard";
 export const router = createBrowserRouter([
 	{
 		path: "/",
@@ -56,6 +57,11 @@ export const router = createBrowserRouter([
 			{
 				path: "admin/inv/:id",
 				element: <Inva></Inva>,
+			},
+			{
+				path: "admin/dashboard",
+				element: <Dashboard></Dashboard>,
+				loader: ({ params }) => fetch("http://localhost:5000/buyProducts"),
 			},
 		],
 	},

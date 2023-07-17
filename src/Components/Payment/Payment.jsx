@@ -9,11 +9,18 @@ const Payment = () => {
 	const [phone, setPhone] = useState("");
 	const [address, setAddress] = useState("");
 	const [quantity, setQuantity] = useState(1);
+	const [corr, setCorr] = useState();
 	const navigate = useNavigate();
 
 	const data = useLoaderData();
 	const onSubmit = (event) => {
 		event.preventDefault();
+		const currentDate = new Date();
+		
+		console.log(currentDate);
+		const payload = {
+			date: currentDate.toISOString(), // Convert Date to ISO string format
+		};
 
 		const newData = {
 			name,
@@ -21,8 +28,11 @@ const Payment = () => {
 			address,
 			quantity,
 			data,
+			corr,
+			status: "processing",
+			payload,
 		};
-		console.log(newData);
+
 		fetch("http://localhost:5000/addtodatabase", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
@@ -48,7 +58,9 @@ const Payment = () => {
 	const goToHome = () => {
 		navigate("/");
 	};
-
+	const handleSelectChange = (event) => {
+		setCorr(event.target.value);
+	};
 	return (
 		<div className="container2 my-10">
 			<div className=" lg:flex justify-evenly">
@@ -102,7 +114,11 @@ const Payment = () => {
 										আপনার এরিয়া সিলেক্ট করুন *
 									</span>
 								</label>
-								<select className="select text-black select-bordered w-full max-w-xs">
+								<select
+									value={corr}
+									onChange={handleSelectChange}
+									className="select text-black select-bordered w-full max-w-xs"
+								>
 									<option disabled selected>
 										আপনার এরিয়া সিলেক্ট করুন ?
 									</option>
