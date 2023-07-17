@@ -115,7 +115,7 @@ const Dashboard = () => {
 						</h1>
 					</div>
 				</div>
-				<div className="mt-16 flex justify-evenly py-10">
+				<div className="mt-16 md:flex justify-evenly py-10">
 					<TodayReport
 						data={data}
 						hold={hold}
