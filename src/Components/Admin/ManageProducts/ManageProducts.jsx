@@ -3,12 +3,11 @@ import { FaPrint } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 import Row from "./Row";
 import { CSVLink } from "react-csv";
+import Footer from "../../Footer/Footer";
 
 const ManageProducts = () => {
 	const product = useLoaderData();
 	// const { name, phone, address, quantity, data } = product;
-
-	
 
 	let count = 1;
 	return (
@@ -51,6 +50,7 @@ const ManageProducts = () => {
 					</tbody>
 				</table>
 			</div>
+			<Footer></Footer>
 		</div>
 	);
 };

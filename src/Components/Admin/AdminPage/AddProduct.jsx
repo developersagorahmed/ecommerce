@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaAngleDoubleLeft } from "react-icons/fa";
 import Swal from "sweetalert2";
+import Footer from "../../Footer/Footer";
 const img_host_URL = `https://api.imgbb.com/1/upload?key=308a695436bd67f31b540c5aeae07127`;
 const AddProduct = () => {
 	const [category, setCategory] = useState("");
@@ -188,6 +189,7 @@ const AddProduct = () => {
 					/>
 				</div>
 			</form>
+			<Footer></Footer>
 		</div>
 	);
 };
