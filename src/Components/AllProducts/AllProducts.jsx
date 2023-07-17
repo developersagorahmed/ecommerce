@@ -5,14 +5,14 @@ import Cart2 from "./Cart2";
 const AllProducts = () => {
 	const [products, setProducts] = useState();
 	useEffect(() => {
-		fetch("http://localhost:5000/products")
+		fetch("https://ecommerce-server-eta.vercel.app/products")
 			.then((data) => data.json())
 			.then((data) => setProducts(data));
 	}, []);
 	return (
 		<div className="container2 mt-5">
 			<h1 className="text-2xl text-black font-semibold mb-4">
-				Necessary Products
+				প্রয়োজনীয় প্রোডাক্ট
 			</h1>
 
 			<div className="grid grid-cols-3 lg:grid-cols-7">

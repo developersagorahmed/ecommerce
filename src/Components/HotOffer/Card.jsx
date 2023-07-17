@@ -20,10 +20,10 @@ const Card = (data) => {
 						alt=""
 					/>
 					<h3 className="text-white text-sm text-right relative bottom-12 right-4 font-bold">
-						{rating.discount}% <br /> Off
+						{rating.discount}% <br /> ছাড়
 					</h3>
 					<div className="bg-[#0089CF] w-6/12 ml-auto rounded-s-full">
-						<h1 className="text-white font-bold text-center">TK {price}</h1>
+						<h1 className="text-white font-bold text-center">৳ {price}</h1>
 					</div>
 				</div>
 			</Link>

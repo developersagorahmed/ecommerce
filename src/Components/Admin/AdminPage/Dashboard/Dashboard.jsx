@@ -17,9 +17,9 @@ const Dashboard = () => {
 		0
 	);
 	useEffect(() => {
-		fetch("http://localhost:5000/admin/home/admin/dashboard").then((dat) =>
-			dat.json().then((res) => setProduct(res))
-		);
+		fetch(
+			"https://ecommerce-server-eta.vercel.app/admin/home/admin/dashboard"
+		).then((dat) => dat.json().then((res) => setProduct(res)));
 	}, []);
 
 	const today = new Date().toISOString().split("T")[0];

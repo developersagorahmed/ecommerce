@@ -16,7 +16,7 @@ const Payment = () => {
 	const onSubmit = (event) => {
 		event.preventDefault();
 		const currentDate = new Date();
-		
+
 		console.log(currentDate);
 		const payload = {
 			date: currentDate.toISOString(), // Convert Date to ISO string format
@@ -33,7 +33,7 @@ const Payment = () => {
 			payload,
 		};
 
-		fetch("http://localhost:5000/addtodatabase", {
+		fetch("https://ecommerce-server-eta.vercel.app/addtodatabase", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(newData),

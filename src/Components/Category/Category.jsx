@@ -4,7 +4,7 @@ const Category = () => {
 	return (
 		<div className="container2 ">
 			<h1 className="text-2xl text-black font-semibold mb-4">
-				Product Category
+				প্রোডাক্ট ক্যাটেগরীজ
 			</h1>
 			<div className="mb-5">
 				<button className="bg-[#FFEFCF] border border-2 mr-3 text-[#777777] font-semibold px-1 py-0 hover:bg-[#2697CC] hover:text-white duration-500">

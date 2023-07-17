@@ -5,7 +5,7 @@ import { FaAngleRight } from "react-icons/fa";
 const HotOffer = () => {
 	const [product, setProduct] = useState();
 	useEffect(() => {
-		fetch("http://localhost:5000/products")
+		fetch("https://ecommerce-server-eta.vercel.app/products")
 			.then((data) => data.json())
 			.then((data) => setProduct(data.slice(0, 12)));
 	}, []);
@@ -20,7 +20,7 @@ const HotOffer = () => {
 					/>
 				</div>
 				<div className="text-lg font-bold text-[#EF4523] flex justify-center items-center mt-3">
-					All Hot Products <FaAngleRight></FaAngleRight>
+					সকল হট ডিল <FaAngleRight></FaAngleRight>
 				</div>
 			</div>
 			<div className="grid grid-cols-2 lg:grid-cols-6 grid-cols-3 gap-5 pb-6 ">

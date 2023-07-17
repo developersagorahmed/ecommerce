@@ -23,13 +23,17 @@ export const router = createBrowserRouter([
 				path: "products/:id",
 				element: <Details></Details>,
 				loader: ({ params }) =>
-					fetch(`http://localhost:5000/products/${params.id}`),
+					fetch(
+						`https://ecommerce-server-eta.vercel.app/products/${params.id}`
+					),
 			},
 			{
 				path: "payment/:id",
 				element: <Payment></Payment>,
 				loader: ({ params }) =>
-					fetch(`http://localhost:5000/products/${params.id}`),
+					fetch(
+						`https://ecommerce-server-eta.vercel.app/products/${params.id}`
+					),
 			},
 			{
 				path: "/success",
@@ -52,7 +56,8 @@ export const router = createBrowserRouter([
 			{
 				path: "admin/manageProduct",
 				element: <ManageProducts></ManageProducts>,
-				loader: ({ params }) => fetch("http://localhost:5000/buyProducts"),
+				loader: ({ params }) =>
+					fetch("https://ecommerce-server-eta.vercel.app/buyProducts"),
 			},
 			{
 				path: "admin/inv/:id",
@@ -61,7 +66,8 @@ export const router = createBrowserRouter([
 			{
 				path: "admin/dashboard",
 				element: <Dashboard></Dashboard>,
-				loader: ({ params }) => fetch("http://localhost:5000/buyProducts"),
+				loader: ({ params }) =>
+					fetch("https://ecommerce-server-eta.vercel.app/buyProducts"),
 			},
 		],
 	},

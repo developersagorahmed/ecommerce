@@ -15,7 +15,7 @@ const Cart2 = ({ data }) => {
 				<Link to={`/products/${_id}`}>
 					<img className="h-[150px] mx-auto" src={image} alt="" />
 					<h2 className="text-[#FDAB04] text-center mt-2 text-xl font-bold">
-						TK{price}
+						৳{price}
 					</h2>
 					<p className="text-[#777777] text-base text-center">
 						{title.slice(0, 30)}
@@ -26,7 +26,7 @@ const Cart2 = ({ data }) => {
 						onClick={() => saveData()}
 						className="bg-[#C9151B] hover:bg-[#550609] duration-500 text-white  h-9 w-10/12 rounded-md"
 					>
-						Order Now
+						অর্ডার করুন
 					</button>
 				</div>
 			</div>

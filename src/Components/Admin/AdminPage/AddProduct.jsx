@@ -36,7 +36,7 @@ const AddProduct = () => {
 						sku,
 						stock,
 					};
-					fetch("http://localhost:5000/addAProduct", {
+					fetch("https://ecommerce-server-eta.vercel.app/addAProduct", {
 						method: "POST",
 						headers: {
 							"content-type": "application/json",
